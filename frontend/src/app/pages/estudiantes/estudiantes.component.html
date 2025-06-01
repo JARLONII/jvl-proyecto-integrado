@@ -1,0 +1,88 @@
+<!-- Consultar la tabla -->
+<div class="mb-3">
+  <label for="filtroColumna" class="form-label">Filtrar por:</label>
+  <div class="input-group">
+    <select [(ngModel)]="filtroColumna" id="filtroColumna" class="form-select">
+      <option value="id">ID</option>
+      <option value="usuario_id">ID Usuario</option>
+      <option value="curso_id">ID Curso</option>
+    </select>
+    <input [(ngModel)]="filtroValor"
+      (keyup.enter)="filtrar()"
+      class="form-control"
+      placeholder="Ej: 1,2,3" />
+    <button class="btn btn-primary" (click)="filtrar()">Buscar</button>
+    <button class="btn btn-secondary" (click)="verTodos()">Quitar filtro</button>
+  </div>
+</div>
+
+<!-- Importar estudiantes -->
+<div *ngIf="rolUsuario === 'administrador'" class="mt-4">
+  <form (submit)="importar()">
+    <input type="file" (change)="onArchivoSeleccionado($event)" accept=".json" required>
+    <button type="submit">Importar Estudiantes</button>
+  </form>
+  <br>
+</div>
+
+<!-- Tabla -->
+<table>
+  <thead>
+    <tr>
+      <th (click)="ordenarPor('id')">ID
+        <span *ngIf="columnaOrden === 'id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('usuario_id')">ID Usuario
+        <span *ngIf="columnaOrden === 'usuario_id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('curso_id')">ID Curso
+        <span *ngIf="columnaOrden === 'curso_id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('created_at')">Creado en
+        <span *ngIf="columnaOrden === 'created_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('updated_at')">Actualizado en
+        <span *ngIf="columnaOrden === 'updated_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th *ngIf="rolUsuario === 'administrador'" colspan="2">
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let estudiante of estudiantes">
+      <!-- ID -->
+      <td>{{ estudiante.id }}</td>
+
+      <!-- Usuario ID -->
+      <td *ngIf="editandoId !== estudiante.id">
+        {{ estudiante.usuario ? '(' + estudiante.usuario.id + ') ' + estudiante.usuario.nombre : estudiante.usuario_id }}
+      </td>
+      <td *ngIf="editandoId === estudiante.id">
+        <input [(ngModel)]="editando!.usuario_id" name="usuario_id" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Curso ID -->
+      <td *ngIf="editandoId !== estudiante.id">
+        {{ estudiante.curso ? '(' + estudiante.curso.id + ') ' + estudiante.curso.nombre : estudiante.curso_id }}
+      </td>
+      <td *ngIf="editandoId === estudiante.id">
+        <input [(ngModel)]="editando!.curso_id" name="curso_id" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Fechas -->
+      <td>{{ estudiante.created_at | date: 'short' }}</td>
+      <td>{{ estudiante.updated_at | date: 'short' }}</td>
+
+      <!-- Editar -->
+      <td *ngIf="rolUsuario === 'administrador'">
+        <button *ngIf="editandoId !== estudiante.id" class="btn btn-sm btn-outline-secondary" (click)="editar(estudiante)">
+          ✏️
+        </button>
+        <div *ngIf="editandoId === estudiante.id" class="d-flex gap-1">
+          <button class="btn btn-sm btn-success" (click)="guardarCambiosFila()">💾</button>
+          <button class="btn btn-sm btn-danger" (click)="cancelarEdicionFila()">❌</button>
+        </div>
+      </td>
+      <!-- Borrar -->
+      <td *ngIf="rolUsuario === 'administrador'">
+        <button class="btn btn-sm btn-outline-secondary" (click)="eliminar(estudiante.id)">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

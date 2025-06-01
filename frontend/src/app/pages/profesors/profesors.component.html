@@ -1,0 +1,101 @@
+<!-- Consultar la tabla -->
+<div class="mb-3">
+  <label for="filtroColumna" class="form-label">Filtrar por:</label>
+  <div class="input-group">
+    <select [(ngModel)]="filtroColumna" id="filtroColumna" class="form-select">
+      <option value="id">ID</option>
+      <option value="usuario_id">ID Usuario</option>
+      <option value="departamento">Departamento</option>
+    </select>
+    <input [(ngModel)]="filtroValor"
+      (keyup.enter)="filtrar()"
+      class="form-control"
+      placeholder="Ej: 1,2,3 o nombre de departamento" />
+    <button class="btn btn-primary" (click)="filtrar()">Buscar</button>
+    <button class="btn btn-secondary" (click)="verTodos()">Quitar filtro</button>
+  </div>
+</div>
+
+<!-- Importar profesores -->
+<div *ngIf="rolUsuario === 'administrador'" class="mt-4">
+  <form (submit)="importar()">
+    <input type="file" (change)="onArchivoSeleccionado($event)" accept=".json" required>
+    <button type="submit">Importar Profesores</button>
+  </form>
+  <br>
+</div>
+
+<!-- Tabla -->
+<table>
+  <thead>
+    <tr>
+      <th (click)="ordenarPor('id')">ID
+        <span *ngIf="columnaOrden === 'id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('usuario_id')">ID Usuario
+        <span *ngIf="columnaOrden === 'usuario_id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('departamento')">Departamento
+        <span *ngIf="columnaOrden === 'departamento'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('created_at')">Creado en
+        <span *ngIf="columnaOrden === 'created_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('updated_at')">Actualizado en
+        <span *ngIf="columnaOrden === 'updated_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th *ngIf="rolUsuario === 'administrador'" colspan="2">
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let profesor of profesors">
+      <!-- ID -->
+      <td>{{ profesor.id }}</td>
+
+      <!-- Usuario ID -->
+      <td *ngIf="editandoId !== profesor.id">
+        {{ profesor.usuario ? '(' + profesor.usuario.id + ') ' + profesor.usuario.nombre : profesor.usuario_id }}
+      </td>
+      <td *ngIf="editandoId === profesor.id">
+        <input [(ngModel)]="editando!.usuario_id" name="usuario_id" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Departamento -->
+      <td *ngIf="editandoId !== profesor.id">
+        {{ profesor.departamento }}
+      </td>
+      <td *ngIf="editandoId === profesor.id">
+        <select [(ngModel)]="editando!.departamento" name="departamento" class="form-select form-select-sm">
+          <option value="Informatica">Informatica</option>
+          <option value="APSD">APSD</option>
+          <option value="Lengua">Lengua</option>
+          <option value="Matematicas">Matematicas</option>
+          <option value="Historia">Historia</option>
+          <option value="Ciencias">Ciencias</option>
+          <option value="Educacion Fisica">Educacion Fisica</option>
+          <option value="Arte">Arte</option>
+          <option value="Musica">Musica</option>
+          <option value="Tecnologia">Tecnologia</option>
+          <option value="Religion">Religion</option>
+          <option value="FOL">FOL</option>
+        </select>
+      </td>
+
+      <!-- Fechas -->
+      <td>{{ profesor.created_at | date: 'short' }}</td>
+      <td>{{ profesor.updated_at | date: 'short' }}</td>
+
+      <!-- Editar -->
+      <td *ngIf="rolUsuario === 'administrador'">
+        <button *ngIf="editandoId !== profesor.id" class="btn btn-sm btn-outline-secondary" (click)="editar(profesor)">
+          ✏️
+        </button>
+        <div *ngIf="editandoId === profesor.id" class="d-flex gap-1">
+          <button class="btn btn-sm btn-success" (click)="guardarCambiosFila()">💾</button>
+          <button class="btn btn-sm btn-danger" (click)="cancelarEdicionFila()">❌</button>
+        </div>
+      </td>
+      <!-- Borrar -->
+      <td *ngIf="rolUsuario === 'administrador'">
+        <button class="btn btn-sm btn-outline-secondary" (click)="eliminar(profesor.id)">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

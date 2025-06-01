@@ -1,0 +1,149 @@
+<!-- Consultar la tabla -->
+<div class="mb-3">
+  <label for="filtroColumna" class="form-label">Filtrar por:</label>
+  <div class="input-group">
+    <select [(ngModel)]="filtroColumna" id="filtroColumna" class="form-select">
+      <option value="id">ID</option>
+      <option value="matricula_id">ID Matricula</option>
+      <option value="evaluacion">Evaluación</option>
+      <option value="nota">Nota</option>
+      <option value="observaciones">Observaciones</option>
+    </select>
+    <input [(ngModel)]="filtroValor"
+      (keyup.enter)="filtrar()"
+      class="form-control"
+      placeholder="Ej: 1,2,3" />
+    <button class="btn btn-primary" (click)="filtrar()">Buscar</button>
+    <button class="btn btn-secondary" (click)="verTodos()">Quitar filtro</button>
+  </div>
+</div>
+
+<!-- Importar notas -->
+<div *ngIf="rolUsuario === 'administrador'" class="mt-4">
+  <form (submit)="importar()">
+    <input type="file" (change)="onArchivoSeleccionado($event)" accept=".json" required>
+    <button type="submit">Importar Notas</button>
+  </form>
+  <br>
+</div>
+
+<!-- Tabla -->
+<table>
+  <thead>
+    <tr>
+      <th (click)="ordenarPor('id')">ID
+        <span *ngIf="columnaOrden === 'id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('matricula_id')">ID Matricula
+        <span *ngIf="columnaOrden === 'matricula_id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('evaluacion')">Evaluación
+        <span *ngIf="columnaOrden === 'evaluacion'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('nota')">Nota
+        <span *ngIf="columnaOrden === 'nota'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('observaciones')">Observaciones
+        <span *ngIf="columnaOrden === 'observaciones'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('created_at')">Creado en
+        <span *ngIf="columnaOrden === 'created_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('updated_at')">Actualizado en
+        <span *ngIf="columnaOrden === 'updated_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th *ngIf="rolUsuario === 'administrador' || rolUsuario === 'profesor'" colspan="2">
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let nota of notas">
+      <!-- ID -->
+      <td>{{ nota.id }}</td>
+
+      <!-- Mostrar la información de esa id -->
+      <td *ngIf="editandoId !== nota.id">
+        {{ nota.matricula
+            ? '(' + nota.matricula.id + ') '
+              + (nota.matricula.estudiante?.usuario?.nombre || '')
+              + ' - '
+              + (nota.matricula.asignatura?.nombre || '')
+              + ' - '
+              + (nota.matricula.asignatura?.curso?.nombre || '')
+            : nota.matricula_id }}
+      </td>
+      <!-- Solo el administrador puede editarla -->
+      <td *ngIf="editandoId === nota.id && rolUsuario === 'administrador'">
+        <input [(ngModel)]="editando!.matricula_id" name="matricula_id" class="form-control form-control-sm" required />
+      </td>
+      <!-- Mostrar información mientras se está editando -->
+      <td *ngIf="editandoId === nota.id && rolUsuario === 'profesor'">
+        {{ nota.matricula
+            ? '(' + nota.matricula.id + ') '
+              + (nota.matricula.estudiante?.usuario?.nombre || '')
+              + ' - '
+              + (nota.matricula.asignatura?.nombre || '')
+              + ' - '
+              + (nota.matricula.asignatura?.curso?.nombre || '')
+            : nota.matricula_id }}
+      </td>
+
+      <!-- Evaluacion -->
+      <td *ngIf="editandoId !== nota.id">{{ nota.evaluacion }}</td>
+      <!-- Solo el administrador puede editarla -->
+      <td *ngIf="editandoId === nota.id && rolUsuario === 'administrador'">
+        <select [(ngModel)]="editando!.evaluacion" name="departamento" class="form-select form-select-sm">
+          <option value="Primera">Primera</option>
+          <option value="Segunda">Segunda</option>
+          <option value="Tercera">Tercera</option>
+          <option value="Final">Final</option>
+        </select>
+      </td>
+      <td *ngIf="editandoId === nota.id && rolUsuario === 'profesor'">
+        {{ nota.evaluacion }}
+      </td>
+
+      <!-- Nota -->
+      <td *ngIf="editandoId !== nota.id">{{ nota.nota }}</td>
+      <td *ngIf="editandoId === nota.id">
+        <input
+          [(ngModel)]="editando!.nota"
+          name="nota"
+          class="form-control form-control-sm"
+          type="number"
+          min="0"
+          max="10"
+          required
+          [readonly]="rolUsuario !== 'profesor' && rolUsuario !== 'administrador'"
+          [disabled]="rolUsuario !== 'profesor' && rolUsuario !== 'administrador'"
+        />
+      </td>
+
+      <!-- Observaciones -->
+      <td *ngIf="editandoId !== nota.id">{{ nota.observaciones }}</td>
+      <td *ngIf="editandoId === nota.id">
+        <input
+          [(ngModel)]="editando!.observaciones"
+          name="observaciones"
+          class="form-control form-control-sm"
+          required
+          [readonly]="rolUsuario !== 'profesor' && rolUsuario !== 'administrador'"
+          [disabled]="rolUsuario !== 'profesor' && rolUsuario !== 'administrador'"
+        />
+      </td>
+
+      <!-- Fechas -->
+      <td>{{ nota.created_at | date: 'short' }}</td>
+      <td>{{ nota.updated_at | date: 'short' }}</td>
+
+      <!-- Editar -->
+      <td *ngIf="rolUsuario === 'administrador' || rolUsuario === 'profesor'">
+        <button *ngIf="editandoId !== nota.id" class="btn btn-sm btn-outline-secondary" (click)="editar(nota)">
+          ✏️
+        </button>
+        <div *ngIf="editandoId === nota.id" class="d-flex gap-1">
+          <button class="btn btn-sm btn-success" (click)="guardarCambiosFila()">💾</button>
+          <button class="btn btn-sm btn-danger" (click)="cancelarEdicionFila()">❌</button>
+        </div>
+      </td>
+      <!-- Borrar -->
+      <td *ngIf="rolUsuario === 'administrador'">
+        <button class="btn btn-sm btn-outline-secondary" (click)="eliminar(nota.id)">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

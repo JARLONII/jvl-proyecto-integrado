@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #007bff;
+}
+
+.navbar-brand, .nav-link {
+  color: white !important;
+}
+
+.banner-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.nav-link.active {
+  background-color: #0056b3;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #0056b3; /*Azul más oscuro al pasar el ratón*/
+  color: #fff !important;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.nav-link {
+  cursor: pointer;
+}

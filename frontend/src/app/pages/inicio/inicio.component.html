@@ -1,0 +1,55 @@
+<div class="inicio-contenido mt-5">
+  <!-- Vista de adminsitrador -->
+  <ng-container *ngIf="rol === 'administrador'">
+    <h1 class="text-center pt-xxl">Bienvenido a la Web de Administración</h1>
+    <p class="text-center">Aquí podrás gestionar la base de datos del I.E.S. Delgado Hernández.</p>
+  </ng-container>
+
+  <!-- Vista de profesor -->
+  <div *ngIf="rol === 'profesor'" class="profesor-bienvenida">
+    <h2>Bienvenido/a, {{ profesorInfo?.nombre }} {{ profesorInfo?.apellidos }}</h2>
+    <p><strong>Departamento:</strong> {{ profesorInfo?.departamento }}</p>
+    <div *ngIf="cargando">Cargando información...</div>
+    <div *ngIf="profesorInfo && profesorInfo.cursos.length > 0">
+      <div *ngFor="let curso of profesorInfo.cursos" class="profesor-curso">
+        <h4>Curso: {{ curso.nombre }}</h4>
+        <ul>
+          <li *ngFor="let asignatura of (curso.asignaturas | keyvalue)" class="profesor-asignatura">
+            <strong>Asignatura:</strong> {{ asignatura.value.nombre }}
+            <ul class="profesor-alumnos">
+              <li *ngFor="let alumno of asignatura.value.alumnos">
+                {{ alumno.nombre }} {{ alumno.apellidos }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="profesorInfo && profesorInfo.cursos.length === 0">
+      <p>No tienes asignaturas asignadas.</p>
+    </div>
+  </div>
+
+  <!-- Vista de estudiante -->
+  <div *ngIf="rol === 'estudiante'" class="profesor-bienvenida">
+    <h2>Bienvenido/a, {{ estudianteInfo?.nombre }} {{ estudianteInfo?.apellidos }}</h2>
+    <div *ngIf="cargando">Cargando información...</div>
+    <div *ngIf="estudianteInfo && estudianteInfo.asignaturas.length > 0">
+      <p>
+        <strong>Curso: </strong>
+        <span *ngIf="estudianteInfo.curso; else sinCurso">{{ estudianteInfo.curso }}</span>
+        <ng-template #sinCurso>No tienes ningún curso asignado.</ng-template>
+      </p>
+      <h4>Asignaturas:</h4>
+      <ul>
+        <li *ngFor="let asig of estudianteInfo.asignaturas">
+          <strong>{{ asig.nombre }}</strong>
+          <span *ngIf="asig.profesor"> — Profesor/a: {{ asig.profesor }}</span>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="estudianteInfo && estudianteInfo.asignaturas.length === 0">
+      <p>No tienes asignaturas asignadas.</p>
+    </div>
+  </div>
+</div>

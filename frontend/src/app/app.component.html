@@ -1,0 +1,9 @@
+<div class="container-custom"> <!--Crear un contenedor personalizado para darle estilos-->
+  <app-menu *ngIf="mostrarMenu"></app-menu> <!--Componente de menu encima del contenido-->
+
+  <router-outlet></router-outlet> <!--Contenido de las páginas-->
+
+  <app-footer *ngIf="mostrarMenu"></app-footer> <!--Componente de footer debajo de el contenido-->
+</div>
+
+

@@ -1,0 +1,123 @@
+<!-- Consultar la tabla -->
+<div class="mb-3">
+  <label for="filtroColumna" class="form-label">Filtrar por:</label>
+  <div class="input-group">
+    <select [(ngModel)]="filtroColumna" id="filtroColumna" class="form-select">
+      <option value="id">ID</option>
+      <option value="nombre">Nombre</option>
+      <option value="apellidos">Apellidos</option>
+      <option value="email">Email</option>
+      <option value="telefono">Teléfono</option>
+      <option value="fecha_nac">Fecha de nacimiento</option>
+      <option value="direccion">Dirección</option>
+    </select>
+    <input [(ngModel)]="filtroValor"
+      (keyup.enter)="filtrar()"
+      class="form-control"
+      placeholder="Ej: 1,2,3" />
+    <button class="btn btn-primary" (click)="filtrar()">Buscar</button>
+    <button class="btn btn-secondary" (click)="verTodos()">Quitar filtro</button>
+  </div>
+</div>
+
+<!-- Importar cursos -->
+<div *ngIf="rolUsuario === 'administrador'" class="mt-4">
+  <form (submit)="importar()">
+    <input type="file" (change)="onArchivoSeleccionado($event)" accept=".json" required>
+    <button type="submit">Importar Cursos</button>
+  </form>
+  <br>
+</div>
+
+<!-- Tabla -->
+<table>
+  <thead>
+    <tr>
+      <th (click)="ordenarPor('id')">ID
+        <span *ngIf="columnaOrden === 'id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('nombre')">Nombre
+        <span *ngIf="columnaOrden === 'nombre'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('nivel')">Nivel
+        <span *ngIf="columnaOrden === 'nivel'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('anio_academico')">Año Académico
+        <span *ngIf="columnaOrden === 'anio_academico'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('created_at')">Creado en
+        <span *ngIf="columnaOrden === 'created_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('updated_at')">Actualizado en
+        <span *ngIf="columnaOrden === 'updated_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th *ngIf="rolUsuario === 'administrador'" colspan="2">
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of cursos">
+      <!-- ID -->
+      <td>{{ curso.id }}</td>
+
+      <!-- Nombre -->
+      <td *ngIf="editandoId !== curso.id">{{ curso.nombre }}</td>
+      <td *ngIf="editandoId === curso.id">
+        <select [(ngModel)]="editando!.nombre" name="nombre" class="form-select form-select-sm">
+          <option value="1º E.S.O.">1º E.S.O.</option>
+          <option value="2º E.S.O.">2º E.S.O.</option>
+          <option value="3º E.S.O.">3º E.S.O.</option>
+          <option value="4º E.S.O.">4º E.S.O.</option>
+          <option value="1º Bachillerato Arte">1º Bachillerato Arte</option>
+          <option value="2º Bachillerato Arte">2º Bachillerato Arte</option>
+          <option value="1º Bachillerato Ciencias">1º Bachillerato Ciencias</option>
+          <option value="2º Bachillerato Ciencias">2º Bachillerato Ciencias</option>
+          <option value="1º Bachillerato Humanidades">1º Bachillerato Humanidades</option>
+          <option value="2º Bachillerato Humanidades">2º Bachillerato Humanidades</option>
+          <option value="1º APSD">1º APSD</option>
+          <option value="2º APSD">2º APSD</option>
+          <option value="1º SMR">1º SMR</option>
+          <option value="2º SMR">2º SMR</option>
+          <option value="1º ASIR">1º ASIR</option>
+          <option value="2º ASIR">2º ASIR</option>
+          <option value="1º DAM">1º DAM</option>
+          <option value="2º DAM">2º DAM</option>
+          <option value="1º Educacion Infantil">1º Educacion Infantil</option>
+          <option value="2º Educacion Infantil">2º Educacion Infantil</option>
+          <option value="1º Integración Social">1º Integración Social</option>
+          <option value="2º Integración Social">2º Integración Social</option>
+        </select>
+      </td>
+
+      <!-- Nivel -->
+      <td *ngIf="editandoId !== curso.id">{{ curso.nivel }}</td>
+      <td *ngIf="editandoId === curso.id">
+        <select [(ngModel)]="editando!.nivel" name="nivel" class="form-select form-select-sm">
+          <option value="E.S.O.">E.S.O.</option>
+          <option value="Bachillerato">Bachillerato</option>
+          <option value="FP">FP</option>
+        </select>
+      </td>
+
+      <!-- Año académico -->
+      <td *ngIf="editandoId !== curso.id">{{ curso.anio_academico }}</td>
+      <td *ngIf="editandoId === curso.id">
+        <input [(ngModel)]="editando!.anio_academico" name="anio_academico" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Fechas -->
+      <td>{{ curso.created_at | date: 'short' }}</td>
+      <td>{{ curso.updated_at | date: 'short' }}</td>
+
+      <!-- Editar -->
+      <td *ngIf="rolUsuario === 'administrador'">
+        <button *ngIf="editandoId !== curso.id" class="btn btn-sm btn-outline-secondary" (click)="editar(curso)">
+          ✏️
+        </button>
+        <div *ngIf="editandoId === curso.id" class="d-flex gap-1">
+          <button class="btn btn-sm btn-success" (click)="guardarCambiosFila()">💾</button>
+          <button class="btn btn-sm btn-danger" (click)="cancelarEdicionFila()">❌</button>
+        </div>
+      </td>
+      <!-- Borrar -->
+      <td *ngIf="rolUsuario === 'administrador'">
+        <button class="btn btn-sm btn-outline-secondary" (click)="eliminar(curso.id)">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

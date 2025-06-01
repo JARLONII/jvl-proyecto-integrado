@@ -1,0 +1,52 @@
+.profesor-bienvenida {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 28px 24px 18px 24px;
+  margin: 32px auto 0 auto;
+  max-width: 700px;
+}
+
+.profesor-bienvenida h2 {
+  color: #007bff;
+  margin-bottom: 12px;
+}
+
+.profesor-bienvenida p {
+  margin-bottom: 18px;
+}
+
+.profesor-curso {
+  background: #e9f5e9;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+
+.profesor-curso h4 {
+  color: #007bff;
+  margin-bottom: 8px;
+}
+
+.profesor-asignatura {
+  margin-bottom: 10px;
+}
+
+.profesor-asignatura strong {
+  color: #198754;
+}
+
+.profesor-alumnos {
+  margin-left: 18px;
+  margin-top: 4px;
+}
+
+.profesor-alumnos li {
+  padding: 2px 0;
+  list-style: disc inside;
+}
+
+.pt-xxl {
+  padding-top: 20%;
+}

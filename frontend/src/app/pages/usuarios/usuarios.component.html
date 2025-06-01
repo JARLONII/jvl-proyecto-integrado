@@ -1,0 +1,125 @@
+<!-- Consultar la tabla -->
+<div class="mb-3">
+  <label for="filtroColumna" class="form-label">Filtrar por:</label>
+  <div class="input-group">
+    <select [(ngModel)]="filtroColumna" id="filtroColumna" class="form-select">
+      <option value="id">ID</option>
+      <option value="nombre">Nombre</option>
+      <option value="apellidos">Apellidos</option>
+      <option value="email">Email</option>
+      <option value="telefono">Teléfono</option>
+      <option value="fecha_nac">Fecha de nacimiento</option>
+      <option value="direccion">Dirección</option>
+    </select>
+    <input [(ngModel)]="filtroValor"
+      (keyup.enter)="filtrar()"
+      class="form-control"
+      placeholder="Ej: 1,2,3" />
+    <button class="btn btn-primary" (click)="filtrar()">Buscar</button>
+    <button class="btn btn-secondary" (click)="verTodos()">Quitar filtro</button>
+  </div>
+</div>
+
+<!--Crear usuarios-->
+<div *ngIf="rolUsuario === 'administrador'" class="mt-4">
+  <form (submit)="importar()">
+    <input type="file" (change)="onArchivoSeleccionado($event)" accept=".json" required>
+    <button type="submit">Importar Usuarios</button>
+    <br><br>
+  </form>
+</div>
+
+<!-- Tabla -->
+<table>
+  <thead>
+    <tr>
+      <th (click)="ordenarPor('id')">ID
+        <span *ngIf="columnaOrden === 'id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('nombre')">Nombre
+        <span *ngIf="columnaOrden === 'nombre'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('apellidos')">Apellidos
+        <span *ngIf="columnaOrden === 'apellidos'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('email')">Email
+        <span *ngIf="columnaOrden === 'email'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('telefono')">Teléfono
+        <span *ngIf="columnaOrden === 'telefono'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('fecha_nac')">Fecha de Nacimiento
+        <span *ngIf="columnaOrden === 'fecha_nac'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('direccion')">Dirección
+        <span *ngIf="columnaOrden === 'direccion'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('rol')">Rol
+        <span *ngIf="columnaOrden === 'rol'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('created_at')">Creado en
+        <span *ngIf="columnaOrden === 'created_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('updated_at')">Actualizado en
+        <span *ngIf="columnaOrden === 'updated_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th *ngIf="rolUsuario === 'administrador'" colspan="2">
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <!-- ID -->
+      <td>{{ usuario.id }}</td>
+
+      <!-- Nombre -->
+      <td *ngIf="editandoId !== usuario.id">{{ usuario.nombre }}</td>
+      <td *ngIf="editandoId === usuario.id">
+        <input [(ngModel)]="editando!.nombre" name="nombre" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Apellidos -->
+      <td *ngIf="editandoId !== usuario.id">{{ usuario.apellidos }}</td>
+      <td *ngIf="editandoId === usuario.id">
+        <input [(ngModel)]="editando!.apellidos" name="apellidos" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Email -->
+      <td *ngIf="editandoId !== usuario.id">{{ usuario.email }}</td>
+      <td *ngIf="editandoId === usuario.id">
+        <input [(ngModel)]="editando!.email" name="email" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Teléfono -->
+      <td *ngIf="editandoId !== usuario.id">{{ usuario.telefono || '—' }}</td>
+      <td *ngIf="editandoId === usuario.id">
+        <input [(ngModel)]="editando!.telefono" name="telefono" class="form-control form-control-sm" />
+      </td>
+
+      <!-- Fecha de nacimiento -->
+      <td *ngIf="editandoId !== usuario.id">{{ usuario.fecha_nac }}</td>
+      <td *ngIf="editandoId === usuario.id">
+        <input [(ngModel)]="editando!.fecha_nac" name="fecha_nac" type="date" class="form-control form-control-sm" />
+      </td>
+
+      <!-- Dirección -->
+      <td *ngIf="editandoId !== usuario.id">{{ usuario.direccion }}</td>
+      <td *ngIf="editandoId === usuario.id">
+        <input [(ngModel)]="editando!.direccion" name="direccion" class="form-control form-control-sm" />
+      </td>
+
+      <!-- Rol -->
+      <td>{{ usuario.rol }}</td>
+
+      <!-- Fechas -->
+      <td>{{ usuario.created_at | date: 'short' }}</td>
+      <td>{{ usuario.updated_at | date: 'short' }}</td>
+
+      <!-- Editar -->
+       <td *ngIf="rolUsuario === 'administrador'">
+        <button *ngIf="editandoId !== usuario.id" class="btn btn-sm btn-outline-secondary" (click)="editar(usuario)">
+          ✏️
+        </button>
+        <div *ngIf="editandoId === usuario.id" class="d-flex gap-1">
+          <button class="btn btn-sm btn-success" (click)="guardarCambiosFila()">💾</button>
+          <button class="btn btn-sm btn-danger" (click)="cancelarEdicionFila()">❌</button>
+        </div>
+      </td>
+      <!-- Borrar -->
+       <td *ngIf="rolUsuario === 'administrador'">
+        <button class="btn btn-sm btn-outline-secondary" (click)="eliminar(usuario.id)">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

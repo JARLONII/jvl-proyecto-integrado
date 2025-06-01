@@ -1,0 +1,90 @@
+<!-- Consultar la tabla -->
+<div class="mb-3">
+  <label for="filtroColumna" class="form-label">Filtrar por:</label>
+  <div class="input-group">
+    <select [(ngModel)]="filtroColumna" id="filtroColumna" class="form-select">
+      <option value="id">ID</option>
+      <option value="estudiante_id">ID Estudiante</option>
+      <option value="asignatura_id">ID Asignatura</option>
+    </select>
+    <input [(ngModel)]="filtroValor"
+      (keyup.enter)="filtrar()"
+      class="form-control"
+      placeholder="Ej: 1,2,3" />
+    <button class="btn btn-primary" (click)="filtrar()">Buscar</button>
+    <button class="btn btn-secondary" (click)="verTodos()">Quitar filtro</button>
+  </div>
+</div>
+
+<!-- Importar matriculas -->
+<div class="mt-4">
+  <form (submit)="importar()">
+    <input type="file" (change)="onArchivoSeleccionado($event)" accept=".json" required>
+    <button type="submit">Importar Matriculas</button>
+  </form>
+  <br>
+</div>
+
+<!-- Tabla -->
+<table>
+  <thead>
+    <tr>
+      <th (click)="ordenarPor('id')">ID
+        <span *ngIf="columnaOrden === 'id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('estudiante_id')">ID Estudiante
+        <span *ngIf="columnaOrden === 'estudiante_id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('asignatura_id')">ID Asignatura
+        <span *ngIf="columnaOrden === 'asignatura_id'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('created_at')">Creado en
+        <span *ngIf="columnaOrden === 'created_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th (click)="ordenarPor('updated_at')">Actualizado en
+        <span *ngIf="columnaOrden === 'updated_at'">{{ ordenAscendente ? '▲' : '▼' }}</span></th>
+      <th colspan="2">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let matricula of matriculas">
+      <!-- ID -->
+      <td>{{ matricula.id }}</td>
+
+      <!-- Estudiante ID -->
+      <td *ngIf="editandoId !== matricula.id">
+        {{ matricula.estudiante
+            ? '(' + matricula.estudiante.id + ') ' + (matricula.estudiante.usuario?.nombre)
+            : matricula.estudiante_id }}
+      </td>
+      <td *ngIf="editandoId === matricula.id">
+        <input [(ngModel)]="editando!.estudiante_id" name="estudiante_id" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Asignatura ID -->
+      <td *ngIf="editandoId !== matricula.id">
+        {{ matricula.asignatura ? '(' + matricula.asignatura.id + ') ' + matricula.asignatura.nombre : matricula.asignatura_id }}
+      </td>
+      <td *ngIf="editandoId === matricula.id">
+        <input [(ngModel)]="editando!.asignatura_id" name="asignatura_id" class="form-control form-control-sm" required />
+      </td>
+
+      <!-- Fechas -->
+      <td>{{ matricula.created_at | date: 'short' }}</td>
+      <td>{{ matricula.updated_at | date: 'short' }}</td>
+
+      <!-- Editar -->
+      <td>
+        <button *ngIf="editandoId !== matricula.id" class="btn btn-sm btn-outline-secondary" (click)="editar(matricula)">
+          ✏️
+        </button>
+        <div *ngIf="editandoId === matricula.id" class="d-flex gap-1">
+          <button class="btn btn-sm btn-success" (click)="guardarCambiosFila()">💾</button>
+          <button class="btn btn-sm btn-danger" (click)="cancelarEdicionFila()">❌</button>
+        </div>
+      </td>
+      <!-- Borrar -->
+      <td>
+        <button class="btn btn-sm btn-outline-secondary" (click)="eliminar(matricula.id)">
+          🗑️
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
