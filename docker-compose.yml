@@ -17,10 +17,8 @@ services:
 
   #Contenedor de la aplicación Laravel
   laravel:
-    image: jvl-proyecto-integrado-laravel
+    image: javiervalladolid/jvl-proyecto-integrado-laravel:v1
     container_name: laravel-app
-    volumes:
-      - ./backend:/var/www/html
     depends_on:
       - postgres
     environment:
@@ -32,16 +30,15 @@ services:
       DB_PASSWORD: password
     networks:
       - app-network
-    command: sh -c "chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && php-fpm" #Asegura permisos correctos
+    command: sh -c "chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && php-fpm" #Dar permisos correctos
 
   #Contenedor de Nginx para servir la aplicación Laravel
   nginx:
-    image: nginx:1.27
+    image: javiervalladolid/jvl-proyecto-integrado-nginx:v1
     container_name: nginx-server
     ports:
       - "8000:80"
     volumes:
-      - ./backend:/var/www/html
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       - laravel
@@ -50,7 +47,7 @@ services:
 
   #Contenedor de la aplicación Angular
   angular:
-    image: jvl-proyecto-integrado-angular
+    image: javiervalladolid/jvl-proyecto-integrado-angular:v1
     container_name: angular-app
     ports:
       - "4200:80"
