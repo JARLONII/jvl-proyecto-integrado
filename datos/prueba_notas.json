@@ -1,0 +1,1044 @@
+{
+    "notas": [
+        {
+            "matricula_id": "1",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "1",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "1",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "1",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "2",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "2",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "2",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "2",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "3",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "3",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "3",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "3",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "4",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "4",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "4",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "4",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "5",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "5",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "5",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "5",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "6",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "6",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "6",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "6",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "7",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "7",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "7",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "7",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "8",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "8",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "8",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "8",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "9",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "9",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "9",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "9",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "10",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "10",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "10",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "10",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "11",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "11",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "11",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "11",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "12",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "12",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "12",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "12",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "13",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "13",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "13",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "13",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "14",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "14",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "14",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "14",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "15",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "15",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "15",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "15",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "16",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "16",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "16",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "16",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "17",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "17",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "17",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "17",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "18",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "18",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "18",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "18",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "19",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "19",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "19",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "19",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "20",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "20",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "20",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "20",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "21",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "21",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "21",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "21",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "22",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "22",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "22",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "22",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "23",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "23",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "23",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "23",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "24",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "24",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "24",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "24",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "25",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "25",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "25",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "25",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "26",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "26",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "26",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "26",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "27",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "27",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "27",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "27",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "28",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "28",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "28",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "28",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "29",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "29",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "29",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "29",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "30",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "30",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "30",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "30",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "31",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "31",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "31",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "31",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "32",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "32",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "32",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "32",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "33",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "33",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "33",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "33",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "34",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "34",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "34",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "34",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "35",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "35",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "35",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "35",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "36",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "36",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "36",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "36",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "37",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "37",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "37",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "37",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "38",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "38",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "38",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "38",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "39",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "39",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "39",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "39",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "40",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "40",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "40",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "40",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "41",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "41",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "41",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "41",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "42",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "42",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "42",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "42",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "43",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "43",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "43",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "43",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "44",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "44",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "44",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "44",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "45",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "45",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "45",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "45",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "46",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "46",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "46",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "46",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "47",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "47",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "47",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "47",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "48",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "48",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "48",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "48",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "49",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "49",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "49",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "49",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "50",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "50",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "50",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "50",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "51",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "51",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "51",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "51",
+            "evaluacion": "Final",
+            "nota": 0
+        },
+        {
+            "matricula_id": "52",
+            "evaluacion": "Primera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "52",
+            "evaluacion": "Segunda",
+            "nota": 0
+        },
+        {
+            "matricula_id": "52",
+            "evaluacion": "Tercera",
+            "nota": 0
+        },
+        {
+            "matricula_id": "52",
+            "evaluacion": "Final",
+            "nota": 0
+        }
+    ]
+}

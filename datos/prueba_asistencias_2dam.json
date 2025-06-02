@@ -1,0 +1,436 @@
+{
+    "asistencias": [
+        {
+            "matricula_id": "1",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "1",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "2",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "2",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "3",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "3",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "4",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "4",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "5",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "5",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "5",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "6",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "6",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "6",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "7",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "7",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "8",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "8",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "9",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "9",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "10",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "10",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "11",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "11",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "11",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "12",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "12",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "12",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "13",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "13",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "14",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "14",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "15",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "15",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "16",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "16",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "17",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "17",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "17",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "18",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "18",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "18",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "19",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "19",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "20",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "20",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "21",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "21",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "22",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "22",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "23",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "23",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "23",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "24",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "24",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "24",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "25",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "25",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "26",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "26",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "27",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "27",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "28",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "28",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "29",
+            "fecha": "2025-05-26",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "29",
+            "fecha": "2025-05-28",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "30",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "30",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "30",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "31",
+            "fecha": "2025-05-27",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "31",
+            "fecha": "2025-05-29",
+            "presente": false,
+            "falta_justificada": true
+        },
+        {
+            "matricula_id": "31",
+            "fecha": "2025-05-30",
+            "presente": false,
+            "falta_justificada": true
+        }
+    ]
+}

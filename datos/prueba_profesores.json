@@ -1,0 +1,40 @@
+{
+    "profesors": [
+        {
+            "usuario_id": "2",
+            "departamento": "Informatica"
+        },
+        {
+            "usuario_id": "3",
+            "departamento": "Informatica"
+        },
+        {
+            "usuario_id": "4",
+            "departamento": "Informatica"
+        },
+        {
+            "usuario_id": "5",
+            "departamento": "FOL"
+        },
+        {
+            "usuario_id": "6",
+            "departamento": "Informatica"
+        },
+        {
+            "usuario_id": "7",
+            "departamento": "APSD"
+        },
+        {
+            "usuario_id": "8",
+            "departamento": "APSD"
+        },
+        {
+            "usuario_id": "9",
+            "departamento": "APSD"
+        },
+        {
+            "usuario_id": "10",
+            "departamento": "APSD"
+        }
+    ]
+}

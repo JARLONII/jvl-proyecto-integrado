@@ -1,0 +1,213 @@
+{
+    "usuarios": [
+        {
+            "nombre": "Jesús",
+            "apellidos": "Rodriguez",
+            "email": "jesus@gmail.com",
+            "password": "jesus123",
+            "password_confirmation": "jesus123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Jose Luis",
+            "apellidos": "Boa",
+            "email": "joseluis@gmail.com",
+            "password": "joseluis123",
+            "password_confirmation": "joseluis123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Daniel",
+            "apellidos": "Cruz",
+            "email": "daniel@gmail.com",
+            "password": "daniel123",
+            "password_confirmation": "daniel123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Victoria",
+            "apellidos": "Luna",
+            "email": "victoria@gmail.com",
+            "password": "victoria123",
+            "password_confirmation": "victoria123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Marta",
+            "apellidos": "Chacón",
+            "email": "marta@gmail.com",
+            "password": "marta123",
+            "password_confirmation": "marta123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Laura",
+            "apellidos": "Rodriguez",
+            "email": "laura@gmail.com",
+            "password": "laura123",
+            "password_confirmation": "laura123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Ana",
+            "apellidos": "Boa",
+            "email": "ana@gmail.com",
+            "password": "ana12345",
+            "password_confirmation": "ana12345",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Carmen",
+            "apellidos": "Cruz",
+            "email": "carmen@gmail.com",
+            "password": "carmen123",
+            "password_confirmation": "carmen123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Marta",
+            "apellidos": "Mendez",
+            "email": "mendez@gmail.com",
+            "password": "marta123",
+            "password_confirmation": "marta123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "profesor"
+        },
+        {
+            "nombre": "Javier",
+            "apellidos": "Valladolid",
+            "email": "javier@gmail.com",
+            "password": "javier123",
+            "password_confirmation": "javier123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Adrián",
+            "apellidos": "Suárez",
+            "email": "adrian@gmail.com",
+            "password": "adrian123",
+            "password_confirmation": "adrian123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Javier",
+            "apellidos": "Garcia",
+            "email": "garcia@gmail.com",
+            "password": "javier123",
+            "password_confirmation": "javier123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Leandro",
+            "apellidos": "Carbajo",
+            "email": "leandro@gmail.com",
+            "password": "leandro123",
+            "password_confirmation": "leandro123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Santi",
+            "apellidos": "Nieto",
+            "email": "santi@gmail.com",
+            "password": "santi123",
+            "password_confirmation": "santi123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Lucía",
+            "apellidos": "Valladolid",
+            "email": "lucia@gmail.com",
+            "password": "lucia123",
+            "password_confirmation": "lucia123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Sofía",
+            "apellidos": "Suárez",
+            "email": "sofia@gmail.com",
+            "password": "sofia123",
+            "password_confirmation": "sofia123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Elena",
+            "apellidos": "García",
+            "email": "elena@gmail.com",
+            "password": "elena123",
+            "password_confirmation": "elena123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Leire",
+            "apellidos": "Carbajo",
+            "email": "leire@gmail.com",
+            "password": "leire123",
+            "password_confirmation": "leire123",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        },
+        {
+            "nombre": "Sara",
+            "apellidos": "Nieto",
+            "email": "sara@gmail.com",
+            "password": "sara1234",
+            "password_confirmation": "sara1234",
+            "telefono": "611223344",
+            "fecha_nac": "2003-11-03",
+            "direccion": "Dali 1",
+            "rol": "estudiante"
+        }
+    ]
+}

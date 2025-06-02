@@ -1,0 +1,64 @@
+{
+    "asignaturas": [
+        {
+            "nombre": "Sistemas de gestión empresarial",
+            "curso_id": "1",
+            "profesor_id": "1"
+        },
+        {
+            "nombre": "Horas de libre configuración",
+            "curso_id": "1",
+            "profesor_id": "2"
+        },
+        {
+            "nombre": "Programación de servicios y procesos",
+            "curso_id": "1",
+            "profesor_id": "3"
+        },
+        {
+            "nombre": "Programación multimedia y dispositivos móviles",
+            "curso_id": "1",
+            "profesor_id": "3"
+        },
+        {
+            "nombre": "Empresas e iniciativa emprendedora",
+            "curso_id": "1",
+            "profesor_id": "4"
+        },
+        {
+            "nombre": "Empresas e iniciativa emprendedora",
+            "curso_id": "2",
+            "profesor_id": "4"
+        },
+        {
+            "nombre": "Acceso a datos",
+            "curso_id": "1",
+            "profesor_id": "5"
+        },
+        {
+            "nombre": "Desarrollo de interfaces",
+            "curso_id": "1",
+            "profesor_id": "5"
+        },
+        {
+            "nombre": "APSD1",
+            "curso_id": "2",
+            "profesor_id": "6"
+        },
+        {
+            "nombre": "APSD2",
+            "curso_id": "2",
+            "profesor_id": "7"
+        },
+        {
+            "nombre": "APSD3",
+            "curso_id": "2",
+            "profesor_id": "8"
+        },
+        {
+            "nombre": "APSD4",
+            "curso_id": "2",
+            "profesor_id": "9"
+        }
+    ]
+}

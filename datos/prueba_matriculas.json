@@ -1,0 +1,212 @@
+{
+  "matriculas": [
+    {
+      "estudiante_id": "1",
+      "asignatura_id": "1"
+    },
+    {
+      "estudiante_id": "1",
+      "asignatura_id": "2"
+    },
+    {
+      "estudiante_id": "1",
+      "asignatura_id": "3"
+    },
+    {
+      "estudiante_id": "1",
+      "asignatura_id": "4"
+    },
+    {
+      "estudiante_id": "1",
+      "asignatura_id": "7"
+    },
+    {
+      "estudiante_id": "1",
+      "asignatura_id": "8"
+    },
+    {
+      "estudiante_id": "2",
+      "asignatura_id": "1"
+    },
+    {
+      "estudiante_id": "2",
+      "asignatura_id": "2"
+    },
+    {
+      "estudiante_id": "2",
+      "asignatura_id": "3"
+    },
+    {
+      "estudiante_id": "2",
+      "asignatura_id": "4"
+    },
+    {
+      "estudiante_id": "2",
+      "asignatura_id": "7"
+    },
+    {
+      "estudiante_id": "2",
+      "asignatura_id": "8"
+    },
+    {
+      "estudiante_id": "3",
+      "asignatura_id": "1"
+    },
+    {
+      "estudiante_id": "3",
+      "asignatura_id": "2"
+    },
+    {
+      "estudiante_id": "3",
+      "asignatura_id": "3"
+    },
+    {
+      "estudiante_id": "3",
+      "asignatura_id": "4"
+    },
+    {
+      "estudiante_id": "3",
+      "asignatura_id": "7"
+    },
+    {
+      "estudiante_id": "3",
+      "asignatura_id": "8"
+    },
+    {
+      "estudiante_id": "4",
+      "asignatura_id": "1"
+    },
+    {
+      "estudiante_id": "4",
+      "asignatura_id": "2"
+    },
+    {
+      "estudiante_id": "4",
+      "asignatura_id": "3"
+    },
+    {
+      "estudiante_id": "4",
+      "asignatura_id": "4"
+    },
+    {
+      "estudiante_id": "4",
+      "asignatura_id": "7"
+    },
+    {
+      "estudiante_id": "4",
+      "asignatura_id": "8"
+    },
+    {
+      "estudiante_id": "5",
+      "asignatura_id": "1"
+    },
+    {
+      "estudiante_id": "5",
+      "asignatura_id": "2"
+    },
+    {
+      "estudiante_id": "5",
+      "asignatura_id": "3"
+    },
+    {
+      "estudiante_id": "5",
+      "asignatura_id": "4"
+    },
+    {
+      "estudiante_id": "5",
+      "asignatura_id": "5"
+    },
+    {
+      "estudiante_id": "5",
+      "asignatura_id": "7"
+    },
+    {
+      "estudiante_id": "5",
+      "asignatura_id": "8"
+    },
+    {
+      "estudiante_id": "6",
+      "asignatura_id": "9"
+    },
+    {
+      "estudiante_id": "6",
+      "asignatura_id": "10"
+    },
+    {
+      "estudiante_id": "6",
+      "asignatura_id": "11"
+    },
+    {
+      "estudiante_id": "6",
+      "asignatura_id": "12"
+    },
+    {
+      "estudiante_id": "7",
+      "asignatura_id": "9"
+    },
+    {
+      "estudiante_id": "7",
+      "asignatura_id": "10"
+    },
+    {
+      "estudiante_id": "7",
+      "asignatura_id": "11"
+    },
+    {
+      "estudiante_id": "7",
+      "asignatura_id": "12"
+    },
+    {
+      "estudiante_id": "8",
+      "asignatura_id": "9"
+    },
+    {
+      "estudiante_id": "8",
+      "asignatura_id": "10"
+    },
+    {
+      "estudiante_id": "8",
+      "asignatura_id": "11"
+    },
+    {
+      "estudiante_id": "8",
+      "asignatura_id": "12"
+    },
+    {
+      "estudiante_id": "9",
+      "asignatura_id": "9"
+    },
+    {
+      "estudiante_id": "9",
+      "asignatura_id": "10"
+    },
+    {
+      "estudiante_id": "9",
+      "asignatura_id": "11"
+    },
+    {
+      "estudiante_id": "9",
+      "asignatura_id": "12"
+    },
+    {
+      "estudiante_id": "10",
+      "asignatura_id": "6"
+    },
+    {
+      "estudiante_id": "10",
+      "asignatura_id": "9"
+    },
+    {
+      "estudiante_id": "10",
+      "asignatura_id": "10"
+    },
+    {
+      "estudiante_id": "10",
+      "asignatura_id": "11"
+    },
+    {
+      "estudiante_id": "10",
+      "asignatura_id": "12"
+    }
+  ]
+}

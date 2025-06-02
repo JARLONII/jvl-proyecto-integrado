@@ -1,0 +1,14 @@
+{
+    "cursos": [
+        {
+            "nombre": "2º DAM",
+            "nivel": "FP",
+            "anio_academico": "2024-2025"
+        },
+        {
+            "nombre": "2º APSD",
+            "nivel": "FP",
+            "anio_academico": "2024-2025"
+        }
+    ]
+}
