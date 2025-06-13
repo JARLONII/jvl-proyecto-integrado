@@ -30,8 +30,7 @@ services:
       DB_PASSWORD: password
     networks:
       - app-network
-    command: sh -c "chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && php-fpm" #Dar permisos correctos
-
+    command: sh -c "chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && php artisan migrate:fresh --seed && php-fpm"
   #Contenedor de Nginx para servir la aplicación Laravel
   nginx:
     image: javiervalladolid/jvl-proyecto-integrado-nginx:v1
@@ -55,6 +54,8 @@ services:
       - laravel
     networks:
       - app-network
+    volumes:
+      - ./nginx/angular.conf:/etc/nginx/conf.d/default.conf:ro
 
 #Volumenes y redes utilizados por los contenedores
 volumes:

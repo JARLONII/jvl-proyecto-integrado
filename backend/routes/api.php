@@ -8,44 +8,22 @@ use App\Http\Controllers\AsignaturaController;
 use App\Http\Controllers\MatriculaController;
 use App\Http\Controllers\NotaController;
 use App\Http\Controllers\AsistenciaController;
+use App\Http\Controllers\LoginController;
 
 //Importar librerias para el login
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Usuario;
 
-Route::post('/login', function (Request $request) {
-    // Pedir credenciales
-    $credentials = $request->validate([
-        'email' => 'required|email',
-        'password' => 'required'
-    ]);
-
-    // Mostrar error si son inválidas
-    if (!Auth::attempt($credentials)) {
-        return response()->json(['message' => 'Credenciales inválidas'], 401);
-    }
-
-    // Crear variable de usuario y token
-    $user = Auth::user();
-    $token = $user->createToken('auth_token')->plainTextToken;
-
-    // Devolver el token con los datos
-    return response()->json([
-        'access_token' => $token,
-        'token_type' => 'Bearer',
-        'user' => $user
-    ]);
-})->name('login'); // <-- AÑADE ESTO
+//Ruta para iniciar sesión
+Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login']);
+//Ruta para comprobar que se ha iniciado la sesión
+Route::get('/login', [\App\Http\Controllers\LoginController::class, 'comprobar'])->name('login');
 
 
-//Ruta del middleware para verificar autenticación
-Route::middleware('auth:sanctum')->get('/perfil', function (Request $request) {
-    return $request->user();
-});
-
-//Rutas para Usuario
 Route::middleware('auth:sanctum')->group(function () {
+
+    //Rutas para Usuario
     Route::post('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'create']);
     Route::get('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'read']);
     Route::put('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'update']);

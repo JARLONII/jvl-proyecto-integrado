@@ -13,7 +13,7 @@ Proyecto de final de grado de app web de Javier Valladolid Luengo 2025.
 
 **1º Descargar el archivo `docker-compose.yaml`.**
 
-**2º Descargar la carpeta `nginx` junto con el archivo `default.conf`. (El archivo `Dockerfile` no es necesario)**
+**2º Descargar la carpeta `nginx` junto con los archivos `default.conf` y `angular.conf`. (El archivo `Dockerfile` no es necesario)**
 
 **3º Tener el archivo `docker-compose.yaml` y la carpeta `nginx` en la misma ubicación**
 

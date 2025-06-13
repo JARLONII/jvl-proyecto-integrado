@@ -27,7 +27,7 @@ export class MenuComponent {
   //Al cerrar sesión, se elimina el token y se redirige al login
   cerrarSesion() {
     this.auth.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
   }
 
 }

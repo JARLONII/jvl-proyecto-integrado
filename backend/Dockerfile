@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     libpq-dev \
     && docker-php-ext-install pdo pdo_pgsql mbstring exif pcntl bcmath gd
 
-#Instala Composer
+#Copiar archivos de composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 #Carpeta de la app
