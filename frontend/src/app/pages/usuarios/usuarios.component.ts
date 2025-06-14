@@ -213,9 +213,12 @@ export class UsuariosComponent implements OnInit {
   guardarCambiosFila(): void {
     if (!this.editando) return;
 
-    this.usuarioService.actualizar(this.editando).subscribe({
+    // Eliminar el campo password antes de actualizar
+    const usuarioActualizado = { ...this.editando };
+    delete usuarioActualizado.password;
+
+    this.usuarioService.actualizar(usuarioActualizado).subscribe({
       next: () => {
-        //En lugar de llamar a verTodos(), volvemos a aplicar el filtro si existe
         this.recargarTabla();
         this.editando = null;
         this.editandoId = null;

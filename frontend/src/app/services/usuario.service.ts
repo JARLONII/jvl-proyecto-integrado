@@ -8,7 +8,7 @@ export interface Usuario {
   nombre: string;
   apellidos: string;
   email: string;
-  password: string;
+  password?: string;
   telefono?: string;
   fecha_nac: string;
   direccion: string;
