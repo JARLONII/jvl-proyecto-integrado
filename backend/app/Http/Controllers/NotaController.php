@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\nota; //Importar el modelo de notas
+use App\Models\Nota; //Importar el modelo de notas
 
 class notaController extends Controller
 {

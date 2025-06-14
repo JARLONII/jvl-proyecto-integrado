@@ -24,50 +24,50 @@ Route::get('/login', [\App\Http\Controllers\LoginController::class, 'comprobar']
 Route::middleware('auth:sanctum')->group(function () {
 
     //Rutas para Usuario
-    Route::post('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'create']);
-    Route::get('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'read']);
-    Route::put('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'update']);
-    Route::delete('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'delete']);
+    Route::middleware(['rol:administrador'])->post('/usuarios', [UsuarioController::class, 'create']);
+    Route::middleware(['rol:administrador,profesor'])->get('/usuarios', [UsuarioController::class, 'read']);
+    Route::middleware(['rol:administrador'])->put('/usuarios', [UsuarioController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/usuarios', [UsuarioController::class, 'delete']);
 
     //Rutas para Estudiante
-    Route::post('/estudiantes', [\App\Http\Controllers\EstudianteController::class, 'create']);
+    Route::middleware(['rol:administrador'])->post('/estudiantes', [EstudianteController::class, 'create']);
     Route::get('/estudiantes', [\App\Http\Controllers\EstudianteController::class, 'read']);
-    Route::put('/estudiantes', [\App\Http\Controllers\EstudianteController::class, 'update']);
-    Route::delete('/estudiantes', [\App\Http\Controllers\EstudianteController::class, 'delete']);
+    Route::middleware(['rol:administrador'])->put('/estudiantes', [EstudianteController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/estudiantes', [EstudianteController::class, 'delete']);
 
     //Rutas para Profesor
-    Route::post('/profesors', [\App\Http\Controllers\ProfesorController::class, 'create']);
+    Route::middleware(['rol:administrador'])->post('/profesors', [ProfesorController::class, 'create']);
     Route::get('/profesors', [\App\Http\Controllers\ProfesorController::class, 'read']);
-    Route::put('/profesors', [\App\Http\Controllers\ProfesorController::class, 'update']);
-    Route::delete('/profesors', [\App\Http\Controllers\ProfesorController::class, 'delete']);
+    Route::middleware(['rol:administrador'])->put('/profesors', [ProfesorController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/profesors', [ProfesorController::class, 'delete']);
 
     //Rutas para Curso
-    Route::post('/cursos', [\App\Http\Controllers\CursoController::class, 'create']);
+    Route::middleware(['rol:administrador'])->post('/cursos', [CursoController::class, 'create']);
     Route::get('/cursos', [\App\Http\Controllers\CursoController::class, 'read']);
-    Route::put('/cursos', [\App\Http\Controllers\CursoController::class, 'update']);
-    Route::delete('/cursos', [\App\Http\Controllers\CursoController::class, 'delete']);
+    Route::middleware(['rol:administrador'])->put('/cursos', [CursoController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/cursos', [CursoController::class, 'delete']);
 
     //Rutas para Asignatura
-    Route::post('/asignaturas', [\App\Http\Controllers\AsignaturaController::class, 'create']);
+    Route::middleware(['rol:administrador'])->post('/asignaturas', [AsignaturaController::class, 'create']);
     Route::get('/asignaturas', [\App\Http\Controllers\AsignaturaController::class, 'read']);
-    Route::put('/asignaturas', [\App\Http\Controllers\AsignaturaController::class, 'update']);
-    Route::delete('/asignaturas', [\App\Http\Controllers\AsignaturaController::class, 'delete']);
+    Route::middleware(['rol:administrador'])->put('/asignaturas', [AsignaturaController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/asignaturas', [AsignaturaController::class, 'delete']);
 
     //Rutas para Matricula
-    Route::post('/matriculas', [\App\Http\Controllers\MatriculaController::class, 'create']);
+    Route::middleware(['rol:administrador'])->post('/matriculas', [MatriculaController::class, 'create']);
     Route::get('/matriculas', [\App\Http\Controllers\MatriculaController::class, 'read']);
-    Route::put('/matriculas', [\App\Http\Controllers\MatriculaController::class, 'update']);
-    Route::delete('/matriculas', [\App\Http\Controllers\MatriculaController::class, 'delete']);
+    Route::middleware(['rol:administrador'])->put('/matriculas', [MatriculaController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/matriculas', [MatriculaController::class, 'delete']);
 
     //Rutas para Nota
-    Route::post('/notas', [\App\Http\Controllers\NotaController::class, 'create']);
+    Route::middleware(['rol:administrador'])->post('/notas', [NotaController::class, 'create']);
     Route::get('/notas', [\App\Http\Controllers\NotaController::class, 'read']);
-    Route::put('/notas', [\App\Http\Controllers\NotaController::class, 'update']);
-    Route::delete('/notas', [\App\Http\Controllers\NotaController::class, 'delete']);
+    Route::middleware(['rol:administrador,profesor'])->put('/notas', [NotaController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/notas', [NotaController::class, 'delete']);
 
     //Rutas para Asistencia
-    Route::post('/asistencias', [\App\Http\Controllers\AsistenciaController::class, 'create']);
+    Route::middleware(['rol:administrador'])->post('/asistencias', [AsistenciaController::class, 'create']);
     Route::get('/asistencias', [\App\Http\Controllers\AsistenciaController::class, 'read']);
-    Route::put('/asistencias', [\App\Http\Controllers\AsistenciaController::class, 'update']);
-    Route::delete('/asistencias', [\App\Http\Controllers\AsistenciaController::class, 'delete']);
+    Route::middleware(['rol:administrador,profesor'])->put('/asistencias', [AsistenciaController::class, 'update']);
+    Route::middleware(['rol:administrador'])->delete('/asistencias', [AsistenciaController::class, 'delete']);
 });
