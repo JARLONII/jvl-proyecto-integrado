@@ -30,7 +30,7 @@ services:
       DB_PASSWORD: password
     networks:
       - app-network
-    command: sh -c "chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && php-fpm"
+    command: sh -c "chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache && php artisan migrate --seed && php-fpm"
   #Contenedor de Nginx para servir la aplicación Laravel
   nginx:
     image: javiervalladolid/jvl-proyecto-integrado-nginx:v1
